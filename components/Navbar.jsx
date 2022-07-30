@@ -18,33 +18,29 @@ const Navbar = () => {
         <Image src="/assets/name.png" alt="/" width="125" height="50" />
         <div>
           <ul className="hidden md:flex">
-            <li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">
-                <a className="ml-10 text-sm uppercase hover:border-b">Home</a>
+                <a>Home</a>
               </Link>
             </li>
-            <li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">
-                <a className="ml-10 text-sm uppercase hover:border-b">About</a>
+                <a>About</a>
               </Link>
             </li>
-            <li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">
-                <a className="ml-10 text-sm uppercase hover:border-b">Skills</a>
+                <a>Skills</a>
               </Link>
             </li>
-            <li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">
-                <a className="ml-10 text-sm uppercase hover:border-b">
-                  Projects
-                </a>
+                <a>Projects</a>
               </Link>
             </li>
-            <li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">
-                <a className="ml-10 text-sm uppercase hover:border-b">
-                  Contact
-                </a>
+                <a>Contact</a>
               </Link>
             </li>
           </ul>
@@ -53,8 +49,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Side Nav - Hidden on medium or above screens */}
       <div
-        className={nav ? 'fixed left-0 top-0 w-full h-screen bg-black/70' : ''}
+        className={
+          nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+        }
       >
         <div
           className={
@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let's build something legendary together
+                Let&apos;s build something legendary together
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Navbar = () => {
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest text-[#5651e5]">
-                Let's Connect
+                Let&apos;s Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
@@ -129,6 +129,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {/* End of Side Navigation */}
     </nav>
   );
 };
