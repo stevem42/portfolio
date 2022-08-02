@@ -1,21 +1,43 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  }, []);
+
   return (
-    <nav className="fixed w-full h-20 shadow-xl z-[100]">
+    <nav
+      className={
+        shadow
+          ? 'fixed w-full h-20 shadow-xl z-[100]'
+          : 'fixed w-full h-20 z-[100]'
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image src="/assets/name.png" alt="/" width="125" height="50" />
+        <Link href="/#home">
+          <a>
+            <Image src="/assets/name.png" alt="/" width="125" height="50" />
+          </a>
+        </Link>
         <div>
           <ul className="hidden md:flex">
             <li className="ml-10 text-sm uppercase hover:border-b">
@@ -24,22 +46,22 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">
+              <Link href="/#about">
                 <a>About</a>
               </Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">
+              <Link href="/#skills">
                 <a>Skills</a>
               </Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">
+              <Link href="/#projects">
                 <a>Projects</a>
               </Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">
+              <Link href="/#contact">
                 <a>Contact</a>
               </Link>
             </li>
