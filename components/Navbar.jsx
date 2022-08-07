@@ -4,10 +4,25 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState('#ecf0f3');
+  const [linkColor, setLinkColor] = useState('#1f2937');
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.asPath === '/property') {
+      setNavBg('transparent');
+      setLinkColor('#ecf0f3');
+    } else {
+      setNavBg('#ecf0f3');
+      setLinkColor('#1f2937');
+    }
+  }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -26,6 +41,7 @@ const Navbar = () => {
 
   return (
     <nav
+      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100]'
@@ -39,7 +55,7 @@ const Navbar = () => {
           </a>
         </Link>
         <div>
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex" style={{ color: `${linkColor}` }}>
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">
                 <a>Home</a>
@@ -66,7 +82,11 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div onClick={handleNav} className="md:hidden">
+          <div
+            onClick={handleNav}
+            className="md:hidden cursor-pointer"
+            style={{ color: `${linkColor}` }}
+          >
             <AiOutlineMenu size={25} />
           </div>
         </div>
@@ -87,7 +107,16 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image src="/assets/name.png" alt="/" width="87" height="35" />
+              <Link href="/">
+                <a onClick={() => setNav(false)}>
+                  <Image
+                    src="/assets/name.png"
+                    alt="/"
+                    width="87"
+                    height="35"
+                  />
+                </a>
+              </Link>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -103,28 +132,28 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <li className="py-4 text-sm">
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
                 <Link href="/">
                   <a>Home</a>
                 </Link>
               </li>
-              <li className="py-4 text-sm">
-                <Link href="/">
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#about">
                   <a>About</a>
                 </Link>
               </li>
-              <li className="py-4 text-sm">
-                <Link href="/">
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#skills">
                   <a>Skills</a>
                 </Link>
               </li>
-              <li className="py-4 text-sm">
-                <Link href="/">
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#projects">
                   <a>Projects</a>
                 </Link>
               </li>
-              <li className="py-4 text-sm">
-                <Link href="/">
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#contact">
                   <a>Contact</a>
                 </Link>
               </li>
