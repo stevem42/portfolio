@@ -53,16 +53,16 @@ const About = () => {
             </Link>
           </p>
           <p className="py-2 text-gray-600">
-            I completed a number of Udemy courses, Harvard's CS50, an MOOC
-            course from the University of Helsinki and countless Youtube
-            tutorials. They taught me an enormous amount about coding and
-            software development, but they all lacked the real world
-            ‘application’, the experience of working within a team to
-            collaborate and create. So I entered into University and completed a
-            Diploma of Information Technology with a focus on Software
-            Development, finishing with just a hair under an HD average. I got
-            some exposure to working within teams and I really enjoyed it. Now I
-            am ready to take all that experience to the next level.
+            I completed a number of Udemy courses, Harvards CS50, an MOOC course
+            from the University of Helsinki and countless Youtube tutorials.
+            They taught me an enormous amount about coding and software
+            development, but they all lacked the real world ‘application’, the
+            experience of working within a team to collaborate and create. So I
+            entered into University and completed a Diploma of Information
+            Technology with a focus on Software Development, finishing with just
+            a hair under an HD average. I got some exposure to working within
+            teams and I really enjoyed it. Now I am ready to take all that
+            experience to the next level.
           </p>
           <p className="py-2 text-gray-600">
             The other-other about me is that I like to stay active, watch and
