@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full py-16 scroll-mt-[2rem] md:h-screen p-2 flex items-center"
+      className="w-full py-16 scroll-mt-[2rem] md:h-screen p-2 flex items-center bg-[#dcdcdc]"
     >
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
@@ -28,7 +28,7 @@ const About = () => {
             years later that I realised “this is what I want to do”.
           </p>
           <p className="py-2 text-gray-600">
-            When I started really learning I couldn’t decide which facet of
+            When I started really learning I could not decide which facet of
             software development that interested me the most, web development,
             game development , desktop applications, mobile applications, mobile
             gaming, so many options but turned out I like them all. Currently I

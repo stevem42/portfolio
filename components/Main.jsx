@@ -9,12 +9,10 @@ const Main = () => {
     <main id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <h1 className="py-4 text-gray-700">
+          <h1 className="py-2 text-gray-700">
             Hey, I&apos;m <span className="text-[#5651e5]">Steve</span>
           </h1>
-          <h1 className="py-2 text-gray-700">
-            A Software Developer from QLD, Australia
-          </h1>
+          <h1 className="py-2 text-gray-700">Full-Stack Developer</h1>
           <p className="py-4 text-xl text-gray-600 max-w-[70%] m-auto">
             <span className="underline font-bold">
               Committed to always learning

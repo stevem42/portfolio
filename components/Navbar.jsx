@@ -49,9 +49,9 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/#home">
+        <Link href="/">
           <a>
-            <Image src="/assets/name.png" alt="/" width="125" height="50" />
+            <Image src="/assets/steve.png" alt="/" width="80" height="50" />
           </a>
         </Link>
         <div>
@@ -110,10 +110,10 @@ const Navbar = () => {
               <Link href="/">
                 <a onClick={() => setNav(false)}>
                   <Image
-                    src="/assets/name.png"
+                    src="/assets/steve.png"
                     alt="/"
                     width="87"
-                    height="35"
+                    height="50"
                   />
                 </a>
               </Link>
