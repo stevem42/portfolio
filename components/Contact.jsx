@@ -1,11 +1,20 @@
 import Link from 'next/link';
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
 const Contact = () => {
+  const [revealed, setRevealed] = useState(null);
+
+  const showEmail = () => {
+    setRevealed((revealed) => !revealed);
+  };
+
+  useEffect(() => setRevealed(false), []);
+
   return (
     <section id="contact" className="w-full scroll-mt-[2rem] md:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -26,27 +35,36 @@ const Contact = () => {
               </div>
               <div>
                 <h2 className="py-2">Steve Mckinnon</h2>
-                <p>Front-End Developer</p>
+                <p>Full-Stack Developer</p>
                 <p className="py-2">
-                  I am available for a freelance or full-time position. Contact
-                  me and let&apos;s talk.
+                  I am available for a full-time position. Contact me and
+                  let&apos;s talk.
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8">Connect With Me</p>
-                <div className="flex items-center justify-between py-4 px-8">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaGithub />
-                  </div>
-
-                  <Link href="/#contact">
+                <p className="uppercase pt-8">
+                  i look forward to hearing from you
+                </p>
+                <div className="flex items-center justify-between max-w-[200px] m-auto py-4 ">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.linkedin.com/in/stevem42"
+                    aria-label="My Linked In Profile - Opens in a new window"
+                  >
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <AiOutlineMail />
+                      <FaLinkedinIn aria-hidden="true" />
                     </div>
-                  </Link>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/stevem42"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaGithub />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -108,6 +126,19 @@ const Contact = () => {
                   Send Message
                 </button>
               </form>
+            </div>
+            <div className="text-center">
+              <p>Want to skip the form?</p>
+              <p>
+                Just{' '}
+                <span
+                  className="cursor-pointer underline decoration-[#5651e5]"
+                  onClick={showEmail}
+                >
+                  email me instead
+                </span>
+                {revealed && <span> at steve.mck42@gmail.com</span>}
+              </p>
             </div>
           </div>
         </div>

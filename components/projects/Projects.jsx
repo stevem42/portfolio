@@ -11,10 +11,7 @@ import Project from './Project';
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="w-full md:h-screen scroll-mt-[2rem] bg-[#dcdcdc]"
-    >
+    <section id="projects" className="w-full scroll-mt-[2rem] bg-[#dcdcdc]">
       <div className="max-w-[1240px] m-auto px-2 py-16">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Projects
@@ -25,21 +22,61 @@ const Projects = () => {
             title="Hny Removals"
             backgroundImg={hnyImg}
             projectUrl="/hny"
+            tech={[
+              'html',
+              'css',
+              'javascript',
+              'bootstrap',
+              'more',
+              'fdsfdasfa',
+              'fdfadfdas',
+            ]}
+            url={{
+              live: 'https://hny.stevemckinnon.dev',
+              code: 'https://github.com/stevem42/hny-removals',
+              more: '/hny',
+            }}
           />
           <Project
             title="Crypto App"
             backgroundImg={cryptoImg}
             projectUrl="/crypto"
+            tech={['html', 'css', 'javascript', 'bootstrap']}
+            url={{
+              live: 'https://hny.stevemckinnon.dev',
+              code: 'https://github.com/stevem42/hny-removals',
+              more: '/hny',
+            }}
           />
           <Project
             title="Netflix Clone"
             backgroundImg={netflixImg}
             projectUrl="/netflix"
+            tech={['html', 'css', 'javascript', 'bootstrap']}
+            url={{
+              live: 'https://hny.stevemckinnon.dev',
+              code: 'https://github.com/stevem42/hny-removals',
+              more: '/hny',
+            }}
           />
           <Project
             title="Twitch Clone"
             backgroundImg={twitchImg}
             projectUrl="/twitch"
+            tech={[
+              'html',
+              'css',
+              'javascript',
+              'bootstrap',
+              'more',
+              'fdsfdasfa',
+              'fdfadfdas',
+            ]}
+            url={{
+              live: 'https://hny.stevemckinnon.dev',
+              code: 'https://github.com/stevem42/hny-removals',
+              more: '/hny',
+            }}
           />
         </div>
       </div>

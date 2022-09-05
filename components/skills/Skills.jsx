@@ -19,9 +19,14 @@ const Skills = () => {
           <Skill source="javascript.png" text="javascript"></Skill>
           <Skill source="react.png" text="react"></Skill>
           <Skill source="tailwind.png" text="tailwind"></Skill>
-          <Skill source="firebase.png" text="firebase"></Skill>
+          <Skill source="nextjs.png" text="nextJS"></Skill>
+          <Skill source="python.png" text="python"></Skill>
           <Skill source="github1.png" text="github"></Skill>
-          <Skill source="shopify.png" text="shopify"></Skill>
+          <Skill source="node.png" text="node"></Skill>
+          <Skill source="bootstrap.png" text="bootstrap"></Skill>
+          <Skill source="mongo.png" text="mongo"></Skill>
+          <Skill source="postgres.png" text="postgreSQL"></Skill>
+          <Skill source="prisma.png" text="prisma"></Skill>
         </div>
       </div>
     </section>
