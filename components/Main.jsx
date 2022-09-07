@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaArrowDown } from 'react-icons/fa';
 
 const Main = () => {
   return (
@@ -10,17 +9,27 @@ const Main = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <h1 className="py-2 text-gray-700">
-            Hey, I&apos;m <span className="text-[#5651e5]">Steve</span>
+            <span className="text-[#5651e5]">Steve</span> Mckinnon
           </h1>
-          <h1 className="py-2 text-gray-700">Full-Stack Developer</h1>
+          <h1 className="py-2 text-gray-700">
+            Full-Stack <span className="text-[#5651e5]">Developer</span>
+          </h1>
           <p className="py-4 text-xl text-gray-600 max-w-[70%] m-auto">
-            <span className="underline font-bold">
-              Committed to always learning
-            </span>{' '}
-            - I enjoy technology, and both the challenge and reward of
-            programming. I am looking for an opportunity to grow my knowledge,
-            and apply my skills.
+            <span className="font-bold">Committed to always learning</span> - I
+            enjoy technology, and both the challenge and reward of programming.
+            I am looking for an opportunity to grow my knowledge, and apply my
+            skills.
           </p>
+          <Link href="/#contact">
+            <div className="flex justify-center items-center text-center">
+              <a className="px-4 py-3 m-3 text-gray-100 mt-4 shadow-xl cursor-pointer shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+                Get in Touch
+                <span className="inline-block ml-4 ">
+                  <FaArrowDown />
+                </span>
+              </a>
+            </div>
+          </Link>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a
               target="_blank"

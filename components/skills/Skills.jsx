@@ -12,8 +12,8 @@ const Skills = () => {
         <p className="uppercase text-xl tracking-widest text-[#5651e5]">
           Skills
         </p>
-        <h2 className="py-4">What I can do</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="py-4">Some of the things I have worked with</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
           <Skill source="html.png" text="html"></Skill>
           <Skill source="css.png" text="css"></Skill>
           <Skill source="javascript.png" text="javascript"></Skill>
@@ -21,6 +21,7 @@ const Skills = () => {
           <Skill source="tailwind.png" text="tailwind"></Skill>
           <Skill source="nextjs.png" text="nextJS"></Skill>
           <Skill source="python.png" text="python"></Skill>
+          <Skill source="java.png" text="java"></Skill>
           <Skill source="github1.png" text="github"></Skill>
           <Skill source="node.png" text="node"></Skill>
           <Skill source="bootstrap.png" text="bootstrap"></Skill>

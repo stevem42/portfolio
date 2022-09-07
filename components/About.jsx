@@ -12,7 +12,7 @@ const About = () => {
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
             About
           </p>
-          <h2 className="py-4">Who I Am</h2>
+          <h2 className="py-4">Why choose me?</h2>
           <p>
             Hi there, I’m Steve. Software Developer. Married with dogs (I have
             photos...)

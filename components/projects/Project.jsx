@@ -14,19 +14,19 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url }) => {
   ));
   return (
     <div className="relative  bg-[#ecf0f3] flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 pb-12">
-      <h1>{title}</h1>
+      <h2 className="mb-2">{title}</h2>
       <Image className="rounded-xl" src={backgroundImg} alt="/" />
 
-      <div>
-        <div className="md:py-8 lg:h-32">
+      <div className="w-full">
+        <div className="md:py-2 lg:h-32">
           <ul className="flex flex-wrap justify-center pt-2">{stack}</ul>
         </div>
-        <div className="flex items-center text-center">
+        <div className="flex justify-center text-center">
           <a
             href={url.live}
             target="_blank"
             rel="noreferrer"
-            className="w-full py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+            className="w-full max-w-[40%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
           >
             See Live
             <span className="inline-block ml-4">
@@ -37,7 +37,7 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url }) => {
             href={url.code}
             target="_blank"
             rel="noreferrer"
-            className="w-full py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+            className="w-full max-w-[40%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
           >
             See On Github
             <span className="inline-block ml-1 md:ml-4">
@@ -49,7 +49,7 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url }) => {
           <a
             href={url.more}
             rel="noreferrer"
-            className=" w-full max-w-[75%] text-center px-4 py-4 md:px-12 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+            className=" w-full max-w-[50%] text-center px-4 py-4 md:px-12 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
           >
             More Info
           </a>
