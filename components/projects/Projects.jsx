@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import HnyModalContent from '../modal/content/HnyModalContent';
 
 import cryptoImg from '../../public/assets/projects/crypto.jpg';
 
@@ -31,6 +32,7 @@ const Projects = () => {
               'postgresql',
               'next-auth',
             ]}
+            content={<HnyModalContent />}
             url={{
               live: 'https://recipehaven.vercel.app/',
               code: 'https://github.com/stevem42/haven3',
@@ -47,6 +49,7 @@ const Projects = () => {
               code: 'https://github.com/stevem42/hny-removals',
               more: '/hny',
             }}
+            content={<HnyModalContent />}
           />
           <Project
             title="Guess The Movie"
@@ -58,6 +61,7 @@ const Projects = () => {
               code: 'https://github.com/stevem42/guess-the-movie',
               more: '/hny',
             }}
+            content={<HnyModalContent />}
           />
           <Project
             title="Recipe Haven"
@@ -69,6 +73,7 @@ const Projects = () => {
               code: 'https://github.com/stevem42/hny-removals',
               more: '/hny',
             }}
+            content={<HnyModalContent />}
           />
         </div>
       </div>
