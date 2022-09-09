@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
+import useLockScroll from '../../lib/useLockScroll';
 
-const Modal = ({ content, show, close }) => {
-  if (!show) return null;
+const Modal = ({ content, close, noScroll }) => {
+  useLockScroll();
 
   return (
     <div
@@ -9,7 +15,7 @@ const Modal = ({ content, show, close }) => {
       onClick={close}
     >
       <div
-        className="px-8 mx-8 max-w-[1240px] z-10 bg-white rounded-lg max-h-[80%] overflow-scroll"
+        className="px-8 mx-8  my-40 max-w-[1240px] z-10 bg-white rounded-lg max-h-[70%] md:max-h-[80%] overflow-scroll"
         onClick={(e) => e.stopPropagation()} //Stop onclick on the modal content
       >
         <div className="flex justify-end">

@@ -4,11 +4,8 @@ import Skill from './Skill';
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="w-full px-2 py-16 scroll-mt-[2rem] md:h-screen"
-    >
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+    <section id="skills" className="w-full px-2 py-16 scroll-mt-[2rem]">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
         <p className="uppercase text-xl tracking-widest text-[#5651e5]">
           Skills
         </p>

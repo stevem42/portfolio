@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import Modal from '../../components/modal/Modal';
+import useLockScroll from '../../lib/useLockScroll';
 
 const Project = ({ title, backgroundImg, projectUrl, tech, url, content }) => {
   const [showModal, setShowModal] = useState(false);
@@ -15,13 +16,16 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url, content }) => {
       {item}
     </li>
   ));
+
   return (
     <div>
-      <Modal
-        show={showModal}
-        close={() => setShowModal(false)}
-        content={content}
-      />
+      {showModal && (
+        <Modal
+          close={() => setShowModal(false)}
+          content={content}
+          // noScroll={useLockScroll}
+        />
+      )}
 
       <div className="relative  bg-[#ecf0f3] flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 pb-12">
         <h2 className="mb-2">{title}</h2>
@@ -36,7 +40,7 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url, content }) => {
               href={url.live}
               target="_blank"
               rel="noreferrer"
-              className="w-full max-w-[40%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+              className="w-full max-w-[45%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
             >
               See Live
               <span className="inline-block ml-4">
@@ -47,7 +51,7 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url, content }) => {
               href={url.code}
               target="_blank"
               rel="noreferrer"
-              className="w-full max-w-[40%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+              className="w-full max-w-[45%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
             >
               See On Github
               <span className="inline-block ml-1 md:ml-4">

@@ -16,7 +16,7 @@ const Contact = () => {
   useEffect(() => setRevealed(false), []);
 
   return (
-    <section id="contact" className="w-full scroll-mt-[2rem] md:h-screen">
+    <section id="contact" className="w-full scroll-mt-[2rem]">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
