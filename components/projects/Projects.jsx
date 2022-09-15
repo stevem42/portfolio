@@ -7,6 +7,7 @@ import cryptoImg from '../../public/assets/projects/crypto.jpg';
 
 import hnyImg from '../../public/assets/projects/hny-home.png';
 import haven1Img from '../../public/assets/projects/haven1.png';
+import haven3Img from '../../public/assets/projects/haven3.png';
 import guessImg from '../../public/assets/projects/guess.png';
 
 import Project from './Project';
@@ -19,10 +20,14 @@ const Projects = () => {
           Projects
         </p>
         <h2 className="py-4">Some of the things I have built</h2>
-        <div className="grid md:grid-cols-2 gap-8 gap-y-16 mt-4">
+        <h3 className="text-red-600">
+          *Click on More Info for some important points about each project*
+        </h3>
+        <div className="grid md:grid-cols-2 gap-8 gap-y-16 mt-8">
           <Project
             title="Recipe Haven 3"
-            backgroundImg={cryptoImg}
+            subtitle="CRUD App Made With NextJS"
+            backgroundImg={haven3Img}
             projectUrl="/crypto"
             tech={[
               'React',
@@ -34,13 +39,14 @@ const Projects = () => {
             ]}
             content={<HnyModalContent />}
             url={{
-              live: 'https://recipehaven.vercel.app/',
+              live: 'https://recipehaven.vercel.app/login?ref=portfolio',
               code: 'https://github.com/stevem42/haven3',
               more: '/hny',
             }}
           />
           <Project
             title="Hny Removals"
+            subtitle="Real Site Made For A Local Business"
             backgroundImg={hnyImg}
             projectUrl="/hny"
             tech={['html', 'css', 'javascript', 'bootstrap']}
@@ -53,6 +59,7 @@ const Projects = () => {
           />
           <Project
             title="Guess The Movie"
+            subtitle="Hangman-Like Game Using the TMDB Api"
             backgroundImg={guessImg}
             projectUrl="/netflix"
             tech={['react', 'css modules', 'tmdb api']}
@@ -65,6 +72,7 @@ const Projects = () => {
           />
           <Project
             title="Recipe Haven"
+            subtitle="CRUD App Made With Python"
             backgroundImg={haven1Img}
             projectUrl="/twitch"
             tech={['html', 'css', 'python', 'flask', 'postgresql']}

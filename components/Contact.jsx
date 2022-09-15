@@ -42,7 +42,7 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8">
+                <p className="uppercase pt-6">
                   i look forward to hearing from you
                 </p>
                 <div className="flex items-center justify-between max-w-[200px] m-auto py-4 ">

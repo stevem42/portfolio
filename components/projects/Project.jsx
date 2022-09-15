@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState } from 'react';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import Modal from '../../components/modal/Modal';
-import useLockScroll from '../../lib/useLockScroll';
 
-const Project = ({ title, backgroundImg, projectUrl, tech, url, content }) => {
+const Project = ({ title, subtitle, backgroundImg, tech, url, content }) => {
   const [showModal, setShowModal] = useState(false);
 
   const stack = tech.map((item) => (
@@ -29,6 +28,7 @@ const Project = ({ title, backgroundImg, projectUrl, tech, url, content }) => {
 
       <div className="relative  bg-[#ecf0f3] flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 pb-12">
         <h2 className="mb-2">{title}</h2>
+        <h3 className="text-lg mb-4">{subtitle}</h3>
         <Image className="rounded-xl" src={backgroundImg} alt="/" />
 
         <div className="w-full">
