@@ -17,7 +17,7 @@ const Project = ({ title, subtitle, backgroundImg, tech, url, content }) => {
   ));
 
   return (
-    <div>
+    <div className="">
       {showModal && (
         <Modal
           close={() => setShowModal(false)}
@@ -26,13 +26,13 @@ const Project = ({ title, subtitle, backgroundImg, tech, url, content }) => {
         />
       )}
 
-      <div className="relative  bg-[#ecf0f3] flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 pb-12">
+      <div className="bg-[#ecf0f3] flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 pb-12">
         <h2 className="mb-2">{title}</h2>
         <h3 className="text-lg mb-4">{subtitle}</h3>
         <Image className="rounded-xl" src={backgroundImg} alt="/" />
 
         <div className="w-full">
-          <div className="md:py-2 lg:h-32">
+          <div className="md:py-2 md:h-40 md:flex md:justify-center md:items-center lg:h-32">
             <ul className="flex flex-wrap justify-center pt-2">{stack}</ul>
           </div>
           <div className="flex justify-center text-center">

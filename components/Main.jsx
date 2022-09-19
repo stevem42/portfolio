@@ -20,7 +20,7 @@ const Main = () => {
             I am looking for an opportunity to grow my knowledge, and apply my
             skills.
           </p>
-          <div className="flex justify-center text-sm sm:text-md">
+          <div className="flex justify-center text-center text-sm sm:text-md">
             <Link href="/#contact">
               <div className="flex justify-center items-center text-center">
                 <a className=" px-4 py-3 m-3 text-gray-100 mt-4 shadow-xl cursor-pointer shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
