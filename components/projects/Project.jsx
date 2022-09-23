@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import Modal from '../../components/modal/Modal';
@@ -27,8 +26,8 @@ const Project = ({ title, subtitle, backgroundImg, tech, url, content }) => {
       )}
 
       <div className="bg-[#ecf0f3] flex flex-col items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 pb-12">
-        <h2 className="mb-2">{title}</h2>
-        <h3 className="text-lg mb-4">{subtitle}</h3>
+        <h2 className="mb-2 font-poppins">{title}</h2>
+        <h3 className="text-lg mb-4 font-poppins">{subtitle}</h3>
         <Image className="rounded-xl" src={backgroundImg} alt="/" />
 
         <div className="w-full">

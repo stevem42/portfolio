@@ -81,6 +81,16 @@ const Navbar = () => {
                 <a>Contact</a>
               </Link>
             </li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
+              <a
+                href="/assets/resume/mckinnon-steve-2022.pdf"
+                alt="steve resume"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+            </li>
           </ul>
           <div
             onClick={handleNav}
@@ -126,7 +136,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let&apos;s build something legendary together
+                Your next software developer
               </p>
             </div>
           </div>
@@ -157,18 +167,43 @@ const Navbar = () => {
                   <a>Contact</a>
                 </Link>
               </li>
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <a
+                  href="/assets/resume/mckinnon-steve-2022.pdf"
+                  alt="steve resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
             <div className="xs:pt-20 pt-40">
               <p className="uppercase tracking-widest text-[#5651e5]">
                 Let&apos;s Connect
               </p>
+
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaLinkedinIn />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaGithub />
-                </div>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.linkedin.com/in/stevem42"
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaLinkedinIn />
+                  </div>
+                </a>
+
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/stevem42"
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaGithub />
+                  </div>
+                </a>
+
                 <Link href="/#contact">
                   <div
                     onClick={() => setNav(false)}

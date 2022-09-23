@@ -1,11 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import HnyModalContent from '../modal/content/HnyModalContent';
 import GtmModalContent from '../modal/content/GtmModalContent';
 import Haven3ModalContent from '../modal/content/Haven3ModalContent';
-
-import cryptoImg from '../../public/assets/projects/crypto.jpg';
 
 import hnyImg from '../../public/assets/projects/hny-home.png';
 import haven1Img from '../../public/assets/projects/haven1.png';

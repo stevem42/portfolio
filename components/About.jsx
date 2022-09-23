@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { FaFileDownload } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -46,6 +47,20 @@ const About = () => {
               </a>
             </Link>
           </p>
+          <div className="flex justify-center w-[75%] md:w-[50%] m-auto text-center items-center py-4 my-4 text-gray-100 mt-4  shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+            <a
+              href="/assets/resume/mckinnon-steve-2022.pdf"
+              alt="steve resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pr-2"
+            >
+              Download my Resume
+            </a>
+            <span className="flex items-center">
+              <FaFileDownload />
+            </span>
+          </div>
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-3 hover:scale-105 ease-in duration-300">
           <img

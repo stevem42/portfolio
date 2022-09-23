@@ -8,10 +8,10 @@ const Main = () => {
     <main id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] xs:px-8 w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <h1 className="mt-4 md:py-2 text-gray-700">
+          <h1 className="mt-4 md:py-2 text-gray-700  font-poppins">
             <span className="text-[#5651e5]">Steve</span> Mckinnon
           </h1>
-          <h1 className="xs:mt-8 py-1 md:py-2 text-gray-700">
+          <h1 className="xs:mt-8 py-1 md:py-2 text-gray-700  font-poppins">
             Full-Stack <span className="text-[#5651e5]">Developer</span>
           </h1>
           <p className="py-2 md:py-4 text-xl text-gray-600 max-w-[90%] md:max-w-[70%] m-auto">
