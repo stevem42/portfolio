@@ -12,9 +12,10 @@ const Haven3ModalContent = () => {
         </p>
         <p>
           #3 Is because this the 3rd iteration of this idea. The original -
-          shown in this section, was my CS50 final project. That was made with
-          Python. This site has been rebuilt from the ground up (while using the
-          same Postgres DB) with NextJs
+          shown in this section, was my CS50 final project. That version was
+          made with Python. It has now been rebuilt from the ground up (while
+          using the same Postgres DB - now migrated from Heroku to Supabase)
+          with NextJs
         </p>
         <p>It is hosted on Vercel</p>
       </div>

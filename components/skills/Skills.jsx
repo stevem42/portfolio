@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import Skill from './Skill';
 
@@ -18,13 +17,11 @@ const Skills = () => {
           <Skill source="tailwind.png" text="tailwind"></Skill>
           <Skill source="nextjs.png" text="nextJS"></Skill>
           <Skill source="python.png" text="python"></Skill>
-          <Skill source="java.png" text="java"></Skill>
           <Skill source="github1.png" text="github"></Skill>
           <Skill source="node.png" text="node"></Skill>
-          <Skill source="bootstrap.png" text="bootstrap"></Skill>
-          <Skill source="mongo.png" text="mongo"></Skill>
           <Skill source="postgres.png" text="postgreSQL"></Skill>
           <Skill source="prisma.png" text="prisma"></Skill>
+          <Skill source="aws.png" text="aws"></Skill>
         </div>
       </div>
     </section>

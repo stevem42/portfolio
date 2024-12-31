@@ -3,7 +3,15 @@ import React, { useState } from 'react';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import Modal from '../../components/modal/Modal';
 
-const Project = ({ title, subtitle, backgroundImg, tech, url, content }) => {
+const Project = ({
+  title,
+  subtitle,
+  backgroundImg,
+  tech,
+  url,
+  content,
+  isLive = true,
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   const stack = tech.map((item) => (
@@ -35,17 +43,19 @@ const Project = ({ title, subtitle, backgroundImg, tech, url, content }) => {
             <ul className="flex flex-wrap justify-center pt-2">{stack}</ul>
           </div>
           <div className="flex justify-center text-center">
-            <a
-              href={url.live}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full max-w-[45%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
-            >
-              See Live
-              <span className="inline-block ml-4">
-                <FaLink />
-              </span>
-            </a>
+            {isLive && (
+              <a
+                href={url.live}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full max-w-[45%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+              >
+                See Live
+                <span className="inline-block ml-4">
+                  <FaLink />
+                </span>
+              </a>
+            )}
             <a
               href={url.code}
               target="_blank"

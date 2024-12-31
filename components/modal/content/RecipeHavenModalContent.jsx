@@ -6,9 +6,6 @@ const RecipeHavenModalContent = () => {
     <div className="mb-4 border-2 border-black p-4">
       <div>
         <h2>Recipe Haven</h2>
-        <p className="mt-4 text-xl">
-          Demo Username: demouser@demo.com ---- Demo Password: Demouser123
-        </p>
         <p className="pt-4">
           This site is a personal project made for myself and my wife to keep
           track of our recipes in a place where either of us can access them.
@@ -33,35 +30,18 @@ const RecipeHavenModalContent = () => {
         <p className="font-bold">Notes:</p>
         <ul className="list-disc ml-4">
           <li className="text-red-600">
-            ** This site only uses HTTP so do not create an account with any
-            real info **
+            For security reasons I have taken this site offline as it will no
+            longer be updated. You can still view the original code on Github
           </li>
-          <li className="text-red-600">
-            It is hosted on Heroku so will be slow on first load
+          <li>
+            This site will not be worked on any more. The site and databse were
+            previously hosted on Heroku. The database has been migrated to
+            Supabase, and is still in use with my Haven3 project
           </li>
-          <li>This site will not be worked on any more</li>
         </ul>
       </div>
-      <div className="mt-4">
-        <p className="font-bold">ToDo:</p>
-        <ul className="list-disc ml-4">
-          <li>Implement favourite recipes</li>
-          <li>Styling and layout changes</li>
-          <li>*Many more</li>
-        </ul>
-      </div>
+
       <div className="flex flex-col md:flex-row justify-center items-center text-center ">
-        <a
-          href="http://recipe-haven.herokuapp.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="w-full max-w-[45%] py-3 mx-1 text-gray-100 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]"
-        >
-          See Live
-          <span className="inline-block ml-4">
-            <FaLink />
-          </span>
-        </a>
         <a
           href="https://github.com/stevem42/recipe-haven"
           target="_blank"

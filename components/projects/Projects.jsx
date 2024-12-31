@@ -81,6 +81,7 @@ const Projects = () => {
               more: '/hny',
             }}
             content={<RecipeHavenModalContent />}
+            isLive={false}
           />
         </div>
       </div>
